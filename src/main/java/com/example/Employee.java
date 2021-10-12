@@ -3,25 +3,27 @@ package com.example;
 public class Employee {
 
    IPet pet;
-   Car car;
+   IVehicle vehicle;
    String name;
    int age;
+
+
+   public IVehicle getVehicle() {
+      return vehicle;
+   }
+
+   public void setVehicle(IVehicle vehicle) {
+      this.vehicle = vehicle;
+   }
 
    public void setPet(IPet pet) {
       this.pet = pet;
    }
 
-   // public IPet getPet() {
-   // return pet;
-   // }
+    public IPet getPet() {
+    return pet;
+    }
 
-   public void setCar(Car car) {
-      this.car = car;
-   }
-
-   public Car getCar() {
-      return car;
-   }
 
    public void setName(String name) {
       this.name = name;
@@ -44,5 +46,9 @@ public class Employee {
       System.out.println("Ко мне!");
 
       this.pet.say();
+   }
+
+   public void honk(){
+      this.vehicle.signalOfVehicle();
    }
 }

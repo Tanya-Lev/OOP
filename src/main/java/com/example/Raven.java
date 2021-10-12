@@ -4,7 +4,7 @@ public class Raven implements IPet {
 
    @Override
    public void say() {
-      System.out.println("Caw-caw :> qweqweqwe 123");
+      System.out.println("Caw-caw :>");
    }
 
 }

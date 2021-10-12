@@ -12,17 +12,16 @@ public class Testt {
       IPet pet = context.getBean("myPet", IPet.class);
       pet.say();
 
-      Car car = context.getBean("myCar", Car.class);
+      Car car = context.getBean("myVehicle", Car.class);
       car.printCar();
 
       System.out.println("----TEST START----");
 
       Employee emp = context.getBean("myEmployee", Employee.class);
+
+      System.out.println("Я "+emp.getName()+", мне "+emp.getAge()+".");
       emp.callYourPet();
+      emp.honk();
 
-
-      System.out.println(emp.getName());
-      System.out.println(emp.getAge());
-      emp.car.printCar();
    }
 }
