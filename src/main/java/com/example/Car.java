@@ -1,23 +1,26 @@
 package com.example;
 
-public class Car implements IVehicle{
+public class Car implements IVehicle {
 
-   String brand;
-   String number;
+    String brand;
+    String number;
 
-   Car(String brand, String number) {
-      this.brand = brand;
-      this.number = number;
-   }
+    Car(String brand, String number) {
+        this.brand = brand;
+        this.number = number;
+    }
 
+//    public void printCar() {
+//        System.out.printf("Brand: %s \tNumber: %s\n", brand, number);
+//    }
 
-   public void printCar() {
+    @Override
+    public void signalOfVehicle() {
+        System.out.println("Beep-Boop!!!!");
+    }
 
-      System.out.printf("Brand: %s \tNumber: %s\n", brand, number);
-   }
-
-   @Override
-   public void signalOfVehicle() {
-      System.out.println("Beep-Boop!!!!");
-   }
+    @Override
+    public void printInfo() {
+        System.out.printf("Brand: %s \tNumber: %s\n", brand, number);
+    }
 }

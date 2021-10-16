@@ -8,20 +8,23 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--Bean - объект, кот создаётся и управляется Spring Container-->
-    <bean id = "myPet"  class="com.example.Raven">
+    <bean id="myPet" class="com.example.Raven">
     </bean>
 
-    <bean id = "myVehicle"  class="com.example.Car">
-        <constructor-arg  value= "Audi"/> 
-        <constructor-arg  value= "654HK"/> 
+    <bean id="myVehicle" class="com.example.Car">
+        <constructor-arg value="Audi"/>
+        <constructor-arg value="654HK"/>
     </bean>
 
+    <!--    <bean id = "myVehicle"  class="com.example.Bike">-->
+    <!--        <constructor-arg  value= "Турист"/>-->
+    <!--    </bean>-->
 
-    <bean id = "myEmployee"  class="com.example.Employee">
-        <property name="pet" ref="myPet" /> 
-        <property name="vehicle" ref="myVehicle" />
-        <property name="name" value="BOB" /> 
-        <property name="age" value="45" /> 
+    <bean id="myEmployee" class="com.example.Employee">
+        <property name="pet" ref="myPet"/>
+        <property name="vehicle" ref="myVehicle"/>
+        <property name="name" value="BOB"/>
+        <property name="age" value="45"/>
     </bean>
 
 
