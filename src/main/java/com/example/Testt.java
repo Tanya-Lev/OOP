@@ -1,6 +1,5 @@
 package com.example;
 
-import com.example.Lab1_Lev.NetworkRequest;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -29,19 +28,4 @@ public class Testt {
 
     }
 
-    @GetMapping("/hello")
-    public String sayHello(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return String.format("Hello %s!", name);
-    }
-
-    @GetMapping("/about")
-    public String about() {
-        return "About us.";
-    }
-
-    @GetMapping("/options")
-    public String options(@RequestParam(value = "name", defaultValue = "Options.") String name) {
-        if (name.isEmpty()) name = "not an option";
-        return name;
-    }
 }
