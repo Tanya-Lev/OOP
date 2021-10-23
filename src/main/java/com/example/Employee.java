@@ -7,6 +7,7 @@ public class Employee {
    String name;
    int age;
 
+   Employee(){System.out.println("--Employee bean was created--");}
 
    public IVehicle getVehicle() {
       return vehicle;
@@ -50,5 +51,13 @@ public class Employee {
 
    public void honk(){
       this.vehicle.signalOfVehicle();
+   }
+
+   public void init(){
+      System.out.println("Class Employee: init method.");
+   }
+
+   public void destroy(){
+      System.out.println("Class Employee: destroy method.");
    }
 }

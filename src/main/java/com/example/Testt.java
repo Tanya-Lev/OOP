@@ -12,12 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class Testt {
 
     public static void main(String[] args) {
-        SpringApplication.run(NetworkRequest.class, args);
+        //SpringApplication.run(NetworkRequest.class, args);
+
+        System.out.println("///////TEST START///////");
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-
-
-        System.out.println("----TEST START----");
 
         Employee emp = context.getBean("myEmployee", Employee.class);
 
@@ -25,6 +24,8 @@ public class Testt {
         emp.callYourPet();
         emp.vehicle.printInfo();
         emp.honk();
+
+        context.close();
 
     }
 

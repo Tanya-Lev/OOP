@@ -8,11 +8,8 @@ public class Car implements IVehicle {
     Car(String brand, String number) {
         this.brand = brand;
         this.number = number;
+        System.out.println("--Car bean was created--");
     }
-
-//    public void printCar() {
-//        System.out.printf("Brand: %s \tNumber: %s\n", brand, number);
-//    }
 
     @Override
     public void signalOfVehicle() {
@@ -22,5 +19,13 @@ public class Car implements IVehicle {
     @Override
     public void printInfo() {
         System.out.printf("Brand: %s \tNumber: %s\n", brand, number);
+    }
+
+    public void init(){
+        System.out.println("Class Car: init method.");
+    }
+
+    public void destroy(){
+        System.out.println("Class Car: destroy method.");
     }
 }

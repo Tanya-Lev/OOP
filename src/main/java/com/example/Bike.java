@@ -6,6 +6,7 @@ public class Bike implements IVehicle {
 
     Bike(String model) {
         this.model = model;
+        System.out.println("--Bike bean was created--");
     }
 
     @Override
@@ -18,5 +19,12 @@ public class Bike implements IVehicle {
         System.out.printf("Model: %s\n", model);
     }
 
+    public void init(){
+        System.out.println("Class Bike: init method.");
+    }
 
+    public void destroy(){
+
+        System.out.println("Class Bike: destroy method.");
+    }
 }
