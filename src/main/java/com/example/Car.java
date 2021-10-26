@@ -1,18 +1,31 @@
 package com.example;
 
-public class Car {
+public class Car implements IVehicle {
 
-   String brand;
-   String number;
+    String brand;
+    String number;
 
-   Car(String brand, String number) {
-      this.brand = brand;
-      this.number = number;
-   }
+    Car(String brand, String number) {
+        this.brand = brand;
+        this.number = number;
+        System.out.println("--Car bean was created--");
+    }
 
-   public void printCar() {
+    @Override
+    public void signalOfVehicle() {
+        System.out.println("Beep-Boop!!!!");
+    }
 
-      System.out.printf("Brand: %s \tNumber: %s\n", brand, number);
-   }
+    @Override
+    public void printInfo() {
+        System.out.printf("Brand: %s \tNumber: %s\n", brand, number);
+    }
 
+    public void init(){
+        System.out.println("Class Car: init method.");
+    }
+
+    public void destroy(){
+        System.out.println("Class Car: destroy method.");
+    }
 }
