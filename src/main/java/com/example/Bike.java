@@ -1,10 +1,19 @@
 package com.example;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+@Component("bikeBean")
+@Scope("prototype")
 public class Bike implements IVehicle {
 
     public String model;
 
-    Bike(String model) {
+    Bike(@Value("Турист") String model) {
         this.model = model;
         System.out.println("--Bike bean was created--");
     }
@@ -19,12 +28,13 @@ public class Bike implements IVehicle {
         System.out.printf("Model: %s\n", model);
     }
 
-    public void init(){
+    @PostConstruct
+    public void init() {
         System.out.println("Class Bike: init method.");
     }
 
-    public void destroy(){
-
+    @PreDestroy
+    public void destroy() {
         System.out.println("Class Bike: destroy method.");
     }
 }
