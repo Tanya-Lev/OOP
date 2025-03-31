@@ -14,7 +14,7 @@ public class Raven implements IPet {
    }
 
    public void destroy(){
-      System.out.println("Class Raven: destroy method.");
+      System.out.println("Class Ravgggen: destroy method.");
    }
 
 }
